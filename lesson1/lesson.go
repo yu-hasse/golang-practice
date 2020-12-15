@@ -6,16 +6,24 @@ import (
 	"time"
 )
 
+const Pi = 3.14
+
+const (
+	Username = "test_user"
+	Password = "test_pass"
+)  
+
 func main() {
 	fmt.Println("Hello world!!", time.Now())
 	fmt.Println(user.Current())
 
 	// 変数宣言について
+	//var宣言は関数の外でも宣言実行できる
 	var (
-		i int = 1
-		f64 float64 = 1.2
-		s string = "test"
-		t, f bool = true, false
+		i    int     = 1
+		f64  float64 = 1.2
+		s    string  = "test"
+		t, f bool    = true, false
 	)
 	fmt.Println(i, f64, s, t, f)
 
@@ -27,5 +35,6 @@ func main() {
 	fmt.Printf("%T\n", xf64)
 	fmt.Printf("%T\n", xi)
 
-	//var宣言は関数の外でも宣言実行できる
+	fmt.Println(Pi, Username, Password)
+
 }
