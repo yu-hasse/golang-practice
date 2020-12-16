@@ -182,7 +182,7 @@ func main() {
 
 	// map
 	m := map[string]int{"apple": 100, "banana": 200}
-	fmt.Println(m) // map[apple:100 banana:200]
+	fmt.Println(m)          // map[apple:100 banana:200]
 	fmt.Println(m["apple"]) // 100
 	m["banana"] = 300
 	fmt.Println(m) // map[apple: 100 banana: 300]
@@ -202,10 +202,17 @@ func main() {
 	fmt.Println(m2) // map[pc:5000]
 
 	var sss []int
-	if sss == nil{
+	if sss == nil {
 		fmt.Println("Nil")
-	} // Nil →var宣言では初期値はnil。メモリ確保してない。	
-	
+	} // Nil →var宣言では初期値はnil。メモリ確保してない。
 
+	//byte型
+	bbyte := []byte{72, 73}
+	fmt.Println(bbyte)         // [72 73]
+	fmt.Println(string(bbyte)) //HI
+
+	cbyte := []byte("HI")
+	fmt.Println(cbyte)         // [72 73]
+	fmt.Println(string(cbyte)) // HI
 
 }
