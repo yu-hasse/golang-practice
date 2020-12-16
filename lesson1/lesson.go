@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os/user"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -107,5 +108,18 @@ func main() {
 
 	fmt.Println(!true)
 	fmt.Println(!false)
+
+	//型変換
+	var xx int = 1
+	fx := float64(xx)
+	fmt.Printf("%T %v %f\n", fx, fx, fx) // float64 1 1.00000
+
+	var yy float64 = 1.2
+	fy := int(yy)
+	fmt.Printf("%T %v %f\n", fy, fy, fy) // int 1 1
+
+	var ss string = "14"
+	z, _ := strconv.Atoi(ss)
+	fmt.Println("%T %v", z, z) // int 14
 
 }
