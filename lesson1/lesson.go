@@ -116,11 +116,11 @@ func main() {
 
 	var yy float64 = 1.2
 	fy := int(yy)
-	fmt.Printf("%T %v %f\n", fy, fy, fy) // int 1 1
+	fmt.Printf("%T %v %d\n", fy, fy, fy) // int 1 1
 
 	var ss string = "14"
 	z, _ := strconv.Atoi(ss)
-	fmt.Println("%T %v", z, z) // int 14
+	fmt.Printf("%T %v", z, z) // int 14
 
 	//配列型
 	var arr [2]int
@@ -157,4 +157,26 @@ func main() {
 	}
 	fmt.Println(board) // [[0 1 2][3 4 5][6 7 8]]
 
+	//スライスのmakeとcap
+	nn := make([]int, 3, 5)
+	fmt.Printf("len=%d cap=%d value=%v\n", len(nn), cap(nn), nn) // len=3 cap=5 [0 0 0]
+	nn = append(nn, 0, 0)
+	fmt.Printf("len=%d cap=%d value=%v\n", len(nn), cap(nn), nn) // len=5 cap=5 [0 0 0 0 0]
+	nn = append(nn, 1, 2, 3, 4, 5)
+	fmt.Printf("len=%d cap=%d value=%v\n", len(nn), cap(nn), nn) // len=10 cap=10 [0 0 0 0 0 1 2 3 4 5]
+
+	aa := make([]int, 3)
+	fmt.Printf("len=%d cap=%d value=%v\n", len(aa), cap(aa), aa) // len=3 cap=3 [0 0 0] →両方3で初期化
+
+	bb := make([]int, 0)
+	var c []int
+	fmt.Printf("len=%d cap=%d value=%v\n", len(bb), cap(bb), bb) // len=0 cap=0 [] →0というスライスをメモリに確保
+	fmt.Printf("len=%d cap=%d value=%v\n", len(c), cap(c), c)    // len=0 cap=0 [] →こっちはnil
+
+	//cc := make([]int, 5)
+	cc := make([]int, 0, 5)
+	for i := 0; i < 5; i++ {
+		fmt.Println(cc)
+	}
+	fmt.Println(cc)
 }
