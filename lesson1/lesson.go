@@ -82,12 +82,30 @@ func main() {
 
 	var str string = "Hello World"
 	fmt.Println(strings.Replace(str, "H", "X", 1)) // Xello World
-	fmt.Println(strings.Contains(str, "World")) // true
+	fmt.Println(strings.Contains(str, "World"))    // true
 
 	fmt.Println(`test
 	test`) // バッククォートだと改行が入っている
 
 	fmt.Println("\"")
 	fmt.Println(`"`)
+
+	//論理値型
+	bt, bf := true, false
+	fmt.Printf("%T %v %t\n", bt, bt, bt) // bool true
+	fmt.Printf("%T %v %t\n", bf, bf, bf) // bool false
+
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println(false && true)
+	fmt.Println(false && false)
+
+	fmt.Println(true || true)
+	fmt.Println(true || false)
+	fmt.Println(false || true)
+	fmt.Println(false || false)
+
+	fmt.Println(!true)
+	fmt.Println(!false)
 
 }
