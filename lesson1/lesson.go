@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os/user"
+	"strings"
 	"time"
 )
 
@@ -74,5 +75,19 @@ func main() {
 	fmt.Println(1 << 0) //0001 0001 > 1
 	fmt.Println(1 << 1) //0001 0010 > 2
 	fmt.Println(1 << 2) //0001 0100 > 4
+
+	// 文字列型
+	fmt.Println("Hello" + "World!")       // > Hello World!
+	fmt.Println(string("Hello World"[0])) // > H
+
+	var str string = "Hello World"
+	fmt.Println(strings.Replace(str, "H", "X", 1)) // Xello World
+	fmt.Println(strings.Contains(str, "World")) // true
+
+	fmt.Println(`test
+	test`) // バッククォートだと改行が入っている
+
+	fmt.Println("\"")
+	fmt.Println(`"`)
 
 }
