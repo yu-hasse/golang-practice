@@ -201,9 +201,11 @@ func main() {
 	m2["pc"] = 5000
 	fmt.Println(m2) // map[pc:5000]
 
-	var sss = []int
-	if s == nil{
+	var sss []int
+	if sss == nil{
 		fmt.Println("Nil")
-	} // Nil →var宣言では初期値はnil。メモリ確保してない。
+	} // Nil →var宣言では初期値はnil。メモリ確保してない。	
 	
+
+
 }
