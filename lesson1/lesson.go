@@ -179,4 +179,31 @@ func main() {
 		fmt.Println(cc)
 	}
 	fmt.Println(cc)
+
+	// map
+	m := map[string]int{"apple": 100, "banana": 200}
+	fmt.Println(m) // map[apple:100 banana:200]
+	fmt.Println(m["apple"]) // 100
+	m["banana"] = 300
+	fmt.Println(m) // map[apple: 100 banana: 300]
+	m["new"] = 500
+	fmt.Println(m) // map[apple: 100 banana: 300 new: 500]
+
+	fmt.Println(m["nothing"]) // 0
+
+	value, isExist := m["apple"]
+	fmt.Println(value, isExist) // 100 true
+
+	value2, isExist2 := m["nothing"]
+	fmt.Println(value2, isExist2) // 0 false
+
+	m2 := make(map[string]int)
+	m2["pc"] = 5000
+	fmt.Println(m2) // map[pc:5000]
+
+	var sss = []int
+	if s == nil{
+		fmt.Println("Nil")
+	} // Nil →var宣言では初期値はnil。メモリ確保してない。
+	
 }
