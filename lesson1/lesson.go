@@ -122,4 +122,19 @@ func main() {
 	z, _ := strconv.Atoi(ss)
 	fmt.Println("%T %v", z, z) // int 14
 
+	//配列型
+	var arr [2]int
+	arr[0] = 100
+	arr[1] = 200
+	fmt.Println(arr) //[100, 200]
+
+	/*
+	   var b [2]int = [2]int{100, 200}
+	   b = append(b, 300)
+	   fmt.Println(b) // 配列はアペンドでサイズ変更不可のためError
+	*/
+
+	var b []int = []int{100, 200}
+	b = append(b, 300)
+	fmt.Println(b) // [100, 200, 300] →スライス
 }
