@@ -269,3 +269,16 @@ func callFoo() {
 	foo(10, 20)
 	foo(10, 20, 30)
 }
+
+//演習
+//Q1
+func q1() {
+	f := 1.11
+	fmt.Printf("%T", int(f))
+}
+
+//Q3
+func q3() {
+	m := map[string]int{"Mike": 20, "Nancy": 24, "Messi": 30}
+	fmt.Printf("%T %v", m, m)
+}
