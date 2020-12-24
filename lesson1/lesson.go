@@ -229,6 +229,13 @@ func main() {
 	func(x int) {
 		fmt.Println("innner func", x)
 	}(1)
+
+	// クロージャ
+	counter := incrementGenerator()
+	fmt.Println(counter())
+	fmt.Println(counter())
+	fmt.Println(counter())
+
 }
 
 // 関数
@@ -241,4 +248,24 @@ func add(x int, y int) (int, int) {
 func calc(price, item int) (result int) {
 	result = price * item
 	return result
+}
+
+// クロージャー
+func incrementGenerator() func() int {
+	xxx := 0
+	return func() int {
+		xxx++
+		return xxx
+	}
+}
+
+// 可変長引数
+func foo(params ...int) {
+	fmt.Println(len(params), params)
+
+}
+
+func callFoo() {
+	foo(10, 20)
+	foo(10, 20, 30)
 }
