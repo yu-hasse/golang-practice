@@ -10,7 +10,7 @@ func by2(num int) string {
 	}
 }
 
-func main() {
+func exerciseIf() {
 	// num := 4
 	// if num % 2 == 0 {
 	// 	fmt.Println("by 2")
