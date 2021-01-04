@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func loggingMain() {
 	loggingSettings("test.log")
 	log.Println("logging")
 	log.Printf("%T %v", "test", "test")
