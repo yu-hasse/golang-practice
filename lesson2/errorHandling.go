@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func handlingMain() {
 	file, err := os.Open("./errorHandling.go")
 	if err != nil {
 		log.Fatal("Error!")
