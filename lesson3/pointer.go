@@ -6,7 +6,7 @@ func one(x *int) {
 	*x = 1
 
 }
-func main() {
+func pointerMain() {
 	var n int = 100
 	one(&n)
 	fmt.Println(n)  // 1
